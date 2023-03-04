@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- css only-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/adminhome.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Management System</title>
+</head>
+<body>
+    <!-- <p>my home page!</p> -->
+    <nav class="navbar navbar-expand-lg text-bg-info p-3">
+        <div class="container-fluid">
+          <img src="../static/images/download.png"class=" logo" alt="...">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/admin">Admin Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/viewdonar">View Donar Details</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Logout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      
+      <h6>Welcome <strong>{{ session['username'] }}</strong></h6>
+
+      
+
+      <div class="container">
+        <table class="table" style="margin-top: 15px;">
+          <thead>
+            <tr class="table-warning">
+              <th scope="col">Serial No</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">DoB</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Blood Group</th>
+              <th scope="col">Last Donation Date</th>
+              <th scope="col">Phone Number</th>
+              <th scope="col">Email</th>
+              <th scope="col">Address</th>
+              <th scope="col">City</th>
+              <th scope="col">Zip</th>
+              <th scope="col">Country</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in data %}
+            <tr class="table-info">
+              <th scope="row">{{ i.id }}</th>
+              <td>{{ i.fname }}</td>
+              <td>{{ i.lname }}</td>
+              <td>{{ i.dob }}</td>
+              <td>{{ i.gender }}</td>
+              <td>{{ i.bgrup }}</td>
+              <td>{{ i.lddate }}</td>
+              <td>{{ i.pnumber }}</td>
+              <td>{{ i.email }}</td>
+              <td>{{ i.address }}</td>
+              <td>{{ i.city }}</td>
+              <td>{{ i.zip }}</td>
+              <td>{{ i.country }}</td>
+            </tr>
+            
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="msg">{{ msg }}</div>
+      </div>
+      
+    <!-- javascript bundle with popper-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

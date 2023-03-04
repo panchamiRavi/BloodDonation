@@ -1,0 +1,23 @@
+.nav-item{
+  margin:5px;
+  display: inline-block;
+  align-items: center;
+  font-size: 18px;
+  
+}
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+.logo{
+    max-width: 7%;
+    max-height: 7%;
+  }
+h6{
+     text-align: center;
+     padding-top: 10px;
+    font-size: large;
+  }

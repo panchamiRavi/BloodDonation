@@ -1,0 +1,22 @@
+
+.nav-item{
+    margin:5px;
+    display: inline-block;
+    align-items: center;
+    font-size: 18px;
+    
+  }
+
+  a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  .carousel-inner{
+    background-size:cover;
+  }
+  .logo{
+    max-width: 7%;
+    max-height: 7%;
+  }
+  

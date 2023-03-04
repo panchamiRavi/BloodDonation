@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- css only-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/userreg.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Management System</title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg text-bg-info p-3">
+        <div class="container-fluid">
+          <img src="../static/images/download.png"class=" logo" alt="...">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/admin">Admin Login</a>  
+                </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Donar
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/donarreg">Donar Registration</a></li>
+                  <li><a class="dropdown-item" href="/donar">Donar Search</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <p class="p">Donar Registration</p>
+      <div class="container">
+        <div class="row">
+            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+              <form action="/donarreg" method="post" class="row g-3">
+                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12,form-control">
+                  <label class="form-label">First Name :</label>
+                  <input type="text" name="fname" class="form-control"  placeholder="First Name" value="" required>
+                </div>
+                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12,form-control"> 
+                  <label class="form-label">Last Name :</label> 
+                  <input type="text" name="lname" class="form-control"  placeholder="Last Name" value="" required>
+                </div>
+                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12,form-group">
+                  <label for="validationDefault02">DoB :</label>
+                  <input type="date" class="form-control" name="dob" placeholder="DoB" value="" required>
+                </div>
+                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12,form-group"></divclass>
+                <p>Gender :</p>
+                 <input class="form-check-input" type="radio"  name="gender" value="male">
+                 <label class="form-check-label">Male</label>
+                 <input class="form-check-input" type="radio" name="gender" value="female">
+                 <label class="form-check-label">Female</label>
+                 <input class="form-check-input" type="radio" name="gender" value="other">
+                 <label class="form-check-label"> Other</label>
+                </div>
+                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12,form-group">
+                <select class="form-select" name="bgrup">
+                  <label class="form-label">Blood Group</label>
+                  <option selected>Choose Your Blood Group :</option>
+                  <option value="a+">A Positive</option>
+                  <option value="a-">A Negative</option>
+                  <option value="b+">B Positive</option>
+                  <option value="b-">B Negative</option>
+                  <option value="o+">O Positive</option>
+                  <option value="o-">O Negative</option>
+                  <option value="ab+">AB Positive</option>
+                  <option value="ab-">AB Negative</option>
+                </select>
+                </div>
+                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12,form-control">
+                  <label class="form-label">Last Donate Date</label>
+                  <input type="datetime-local" class="form-control" name="ldodate"  placeholder="Last Donate Date" value="" required>
+                </div>
+                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12,form-control">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" name="pnumber"  class="form-control"  placeholder="Phone Number" required>
+                </div>
+                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12,form-control">
+                <label class="form-label">Email</label>
+                <input type="email" name="email"  class="form-control" placeholder="Email" required>
+                </div>
+                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12,form-control">
+                  <label class="form-label">Address</label>
+                  <textarea name="address" class="form-control" rows="3"placeholder="Please enter Your Address" required></textarea>
+                </div>
+                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12,form-control">
+                  <label class="form-label">City</label>
+                  <input name="city" type="text" class="form-control" placeholder="City" required>
+                </div>
+                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12,form-control">
+                  <label class="form-label">Zip</label>
+                  <input name="zip" type="text" class="form-control" required>
+                </div>
+                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12,form-control">
+                  <label class="form-label">Country</label>
+                  <select class="form-select" name="country">
+                    <option selected>Choose Your Country</option>
+                    <option>India</option>
+                    <option>America</option>
+                    <option>China</option>
+                    <option>Russia</option>
+                    <option>United Kingdom</option>
+                    <option>Canada</option>
+                  </select>
+                </div>
+                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12,form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" required>
+                    <label class="form-check-label">
+                      Agree to terms and conditions
+                    </label>
+                  </div>
+                </div>
+                <div>
+                  <div class="msg">{{ msg }}</div>
+                </div>
+                <div>
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+      
+    <!-- javascript bundle with popper-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
